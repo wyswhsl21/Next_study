@@ -17,7 +17,8 @@ export default function Home({ name }) {
   return <div>{name}</div>;
 }
 //SSR 을 위해 서버 측에서 컴포넌트에게 전달할 데이터를 설정하는 함수
-export const getServerSideProps = async () => {
+export const getStaticProps = async () => {
+  console.log("countries 데이터 불러옴");
   return {
     props: {
       name: "KOREA",
